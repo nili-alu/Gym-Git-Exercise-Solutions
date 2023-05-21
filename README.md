@@ -1,5 +1,5 @@
-## Bundle 1
-# Exercise 1
+# Bundle 1
+## Exercise 1
 
 ```
 PS C:\Users\Hp\Desktop\Gym-Git-Exercise-Solutions> echo "# Gym-Git-Exercise-Solutions" >> README.md
