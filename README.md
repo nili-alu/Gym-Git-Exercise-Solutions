@@ -56,7 +56,8 @@ PS C:\Users\Hp\Desktop\Gym-Git-Exercise-Solutions>
 
 ```
 
-##Exercise 2
+# Bundle 1
+## Exercise 2
 
 ```
 PS C:\Users\Hp\Desktop\Gym-Git-Exercise-Solutions> git status
