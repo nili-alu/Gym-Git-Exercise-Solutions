@@ -238,32 +238,6 @@ Changes not staged for commit:
   (use "git restore <file>..." to discard changes in working directomit -m "learn how to solve conflict"
 [main ff57cc7] learn how to solve conflict
 
-                                                          it -a")   
-                                                           srevices.
-
-
-                                                           services.
-
-                                                          mit -m "le
-
-
-
-                                                          h
-
-
-
-
-                                                          e.        
-
-                                                          al objects
-
-                                                          git       
-
-                                                          ckout ft/s
-
-
-                                                          '.        
-                                                          ge main   
 
 [ft/service-redesign 48ebe75] Merge branch 'main' into ft/service-redesign                                          result.
 PS C:\Users\Hp\Desktop\Gym-Git-Exercise-Solutions> git merge
@@ -279,4 +253,266 @@ remote: Resolving deltas: 100% (2/2), completed with 2 local objects.
 To https://github.com/nili-alu/Gym-Git-Exercise-Solutions.git
    c53b3eb..48ebe75  ft/service-redesign -> ft/service-redesign
 PS C:\Users\Hp\Desktop\Gym-Git-Exercise-Solutions> 
+```
+
+# Bundle 3 
+## Exercise 1
+
+``` 
+
+Hp@LIEVIN-1999NIYO MINGW64 ~/Desktop/Gym-Git-Exercise-Solutions (ft/service-redesign)
+$ git status
+On branch ft/service-redesign
+Your branch is up to date with 'origin/ft/service-redesign'.
+
+
+nothing to commit, working tree clean
+
+Hp@LIEVIN-1999NIYO MINGW64 ~/Desktop/Gym-Git-Exercise-Solutions (ft/service-redesign)
+$ git checkout -b ft/team-page
+Switched to a new branch 'ft/team-page'
+
+Hp@LIEVIN-1999NIYO MINGW64 ~/Desktop/Gym-Git-Exercise-Solutions (ft/team-page)
+$ git add team.html
+
+Hp@LIEVIN-1999NIYO MINGW64 ~/Desktop/Gym-Git-Exercise-Solutions (ft/team-page)
+$ git commit -m "team page added"
+[ft/team-page 93be0b3] team page added
+ 1 file changed, 12 insertions(+)     
+ create mode 100644 team.html
+
+Hp@LIEVIN-1999NIYO MINGW64 ~/Desktop/Gym-Git-Exercise-Solutions (ft/team-page)
+$ git push
+fatal: The current branch ft/team-page has no upstream branch.
+To push the current branch and set the remote as upstream, use
+
+    git push --set-upstream origin ft/team-page
+
+
+Hp@LIEVIN-1999NIYO MINGW64 ~/Desktop/Gym-Git-Exercise-Solutions (ft/team-page)
+$ git push --set-upstream origin ft/team-page
+Enumerating objects: 4, done.
+Counting objects: 100% (4/4), done.
+Delta compression using up to 8 threads
+Compressing objects: 100% (3/3), done.
+Writing objects: 100% (3/3), 464 bytes | 232.00 KiB/s, done.
+Total 3 (delta 1), reused 0 (delta 0), pack-reused 0        
+remote: Resolving deltas: 100% (1/1), completed with 1 local object.
+remote: 
+remote: Create a pull request for 'ft/team-page' on GitHub by visiting:
+remote:      https://github.com/nili-alu/Gym-Git-Exercise-Solutions/pull/new/ft/team-page
+remote:
+To https://github.com/nili-alu/Gym-Git-Exercise-Solutions.git
+ * [new branch]      ft/team-page -> ft/team-page
+Branch 'ft/team-page' set up to track remote branch 'ft/team-page' from 'origin'.
+
+Hp@LIEVIN-1999NIYO MINGW64 ~/Desktop/Gym-Git-Exercise-Solutions (ft/team-page)
+$ git checkout main
+Switched to branch 'main'
+Your branch is behind 'origin/main' by 1 commit, and can be 
+fast-forwarded.
+  (use "git pull" to update your local branch)
+
+Hp@LIEVIN-1999NIYO MINGW64 ~/Desktop/Gym-Git-Exercise-Solutions (main)
+$ git checkout -b ft/contact-page
+Switched to a new branch 'ft/contact-page'
+
+Hp@LIEVIN-1999NIYO MINGW64 ~/Desktop/Gym-Git-Exercise-Solutions (ft/contact-page)
+$ git checkout ft/team-page
+Switched to branch 'ft/team-page'
+Your branch is up to date with 'origin/ft/team-page'.       
+
+Hp@LIEVIN-1999NIYO MINGW64 ~/Desktop/Gym-Git-Exercise-Solutions (ft/team-page)
+$ git log
+commit 93be0b3ec6338aecffb31f1ca217e51c9e3e1dcb (HEAD -> ft/team-page, origin/ft/team-page)
+Author: Lievin <l.niyoyandi@alustudent.com>
+Date:   Mon May 22 18:42:09 2023 +0300
+
+    team page added
+
+commit 48ebe75634c484057a9aa4378a48c4a403e3397e (origin/ft/service-redesign, ft/service-redesign)
+Merge: c53b3eb ff57cc7
+Author: Lievin <l.niyoyandi@alustudent.com>
+Date:   Mon May 22 13:41:32 2023 +0300
+
+    Merge branch 'main' into ft/service-redesign
+
+commit ff57cc71de3fd8ea3feb6d89d8d51d9bf9ad5959 (main, ft/contact-page)
+Author: Lievin <l.niyoyandi@alustudent.com>
+Date:   Mon May 22 13:29:32 2023 +0300
+
+    learn how to solve conflict
+
+commit c53b3eb7901c39a3c463345ddfa85e0a52cfc029
+Author: Lievin <l.niyoyandi@alustudent.com>
+Date:   Mon May 22 13:21:22 2023 +0300
+
+    bundle 2, exercise 2
+
+commit 6830d698909109a960963cf5f29e84d2afec75dc
+Merge: 1e7287a 00fd8fb
+Author: ALVINdimpos <49131269+ALVINdimpos@users.noreply.github.com>
+
+Hp@LIEVIN-1999NIYO MINGW64 ~/Desktop/Gym-Git-Exercise-Solutions (ft/team-page)
+$
+
+Hp@LIEVIN-1999NIYO MINGW64 ~/Desktop/Gym-Git-Exercise-Solutions (ft/team-page)
+$ git checkout ft/contact-page
+Switched to branch 'ft/contact-page'
+
+Hp@LIEVIN-1999NIYO MINGW64 ~/Desktop/Gym-Git-Exercise-Solutions (ft/contact-page)
+b git cherry-pick 93be0b3ec6338aecffb31f1ca217e51c9e3e1dcb
+[ft/contact-page 8dac584] team page added
+ Date: Mon May 22 18:42:09 2023 +0300
+ 1 file changed, 12 insertions(+)
+ create mode 100644 team.html
+
+Hp@LIEVIN-1999NIYO MINGW64 ~/Desktop/Gym-Git-Exercise-Solutions (ft/contact-page)
+$ git status
+On branch ft/contact-page
+Untracked files:
+  (use "git add <file>..." to include in what will be committed)
+        contact.html
+
+nothing added to commit but untracked files present (use "git add" to track)
+
+Hp@LIEVIN-1999NIYO MINGW64 ~/Desktop/Gym-Git-Exercise-Solutions (ft/contact-page)
+$ git add contact.html
+
+Hp@LIEVIN-1999NIYO MINGW64 ~/Desktop/Gym-Git-Exercise-Solutions (ft/contact-page)
+$ git commit -m 'contact page"
+> ^C
+
+Hp@LIEVIN-1999NIYO MINGW64 ~/Desktop/Gym-Git-Exercise-Solutions (ft/contact-page)
+$ git commit -m "contact page created"
+[ft/contact-page 5a026ad] contact page created
+ 1 file changed, 12 insertions(+)
+ create mode 100644 contact.html
+
+Hp@LIEVIN-1999NIYO MINGW64 ~/Desktop/Gym-Git-Exercise-Solutions (ft/contact-page)
+$ git push
+fatal: The current branch ft/contact-page has no upstream branch.
+To push the current branch and set the remote as upstream, use
+
+    git push --set-upstream origin ft/contact-page
+
+
+Hp@LIEVIN-1999NIYO MINGW64 ~/Desktop/Gym-Git-Exercise-Solutions (ft/contact-page)
+$ git push --set-upstream origin ft/contact-page
+Enumerating objects: 7, done.
+Counting objects: 100% (7/7), done.
+Delta compression using up to 8 threads
+Compressing objects: 100% (6/6), done.
+Writing objects: 100% (6/6), 731 bytes | 731.00 KiB/s, done.
+Total 6 (delta 3), reused 0 (delta 0), pack-reused 0        
+remote: Resolving deltas: 100% (3/3), completed with 1 local object.
+remote: 
+remote: Create a pull request for 'ft/contact-page' on GitHub by visiting:
+remote:      https://github.com/nili-alu/Gym-Git-Exercise-Solutions/pull/new/ft/contact-page
+remote:
+To https://github.com/nili-alu/Gym-Git-Exercise-Solutions.git
+ * [new branch]      ft/contact-page -> ft/contact-page     
+Branch 'ft/contact-page' set up to track remote branch 'ft/contact-page' from 'origin'.
+
+Hp@LIEVIN-1999NIYO MINGW64 ~/Desktop/Gym-Git-Exercise-Solutions (ft/contact-page)
+$ git checkout -b ft/fag-page
+Switched to a new branch 'ft/fag-page'
+
+Hp@LIEVIN-1999NIYO MINGW64 ~/Desktop/Gym-Git-Exercise-Solutions (ft/fag-page)
+$ git status
+On branch ft/fag-page
+Untracked files:
+  (use "git add <file>..." to include in what will be committed)
+        fag.html
+
+nothing added to commit but untracked files present (use "git add" to track)
+
+Hp@LIEVIN-1999NIYO MINGW64 ~/Desktop/Gym-Git-Exercise-Solutions (ft/fag-page)
+$ git add fag.html
+
+Hp@LIEVIN-1999NIYO MINGW64 ~/Desktop/Gym-Git-Exercise-Solutions (ft/fag-page)
+$ git commit -m "fag page created"
+[ft/fag-page a17532f] fag page created
+ 1 file changed, 12 insertions(+)
+ create mode 100644 fag.html
+
+Hp@LIEVIN-1999NIYO MINGW64 ~/Desktop/Gym-Git-Exercise-Solutions (ft/fag-page)
+$ git push
+fatal: The current branch ft/fag-page has no upstream branch.
+To push the current branch and set the remote as upstream, use
+
+    git push --set-upstream origin ft/fag-page
+
+
+Hp@LIEVIN-1999NIYO MINGW64 ~/Desktop/Gym-Git-Exercise-Solutions (ft/fag-page)
+$ git push --set-upstream origin ft/fag-page
+Enumerating objects: 4, done.
+Counting objects: 100% (4/4), done.
+Delta compression using up to 8 threads
+Compressing objects: 100% (3/3), done.
+Writing objects: 100% (3/3), 467 bytes | 233.00 KiB/s, done.
+Total 3 (delta 1), reused 0 (delta 0), pack-reused 0        
+remote: Resolving deltas: 100% (1/1), completed with 1 local object.
+remote: 
+remote: Create a pull request for 'ft/fag-page' on GitHub by visiting:
+remote:      https://github.com/nili-alu/Gym-Git-Exercise-Solutions/pull/new/ft/fag-page
+remote:
+To https://github.com/nili-alu/Gym-Git-Exercise-Solutions.git
+ * [new branch]      ft/fag-page -> ft/fag-page
+Branch 'ft/fag-page' set up to track remote branch 'ft/fag-page' from 'origin'.
+
+Hp@LIEVIN-1999NIYO MINGW64 ~/Desktop/Gym-Git-Exercise-Solutions (ft/fag-page)
+$ git log
+commit a17532faf0a84fe6f0811018966dd9805d3819fa (HEAD -> ft/fag-page, origin/ft/fag-page)
+Author: Lievin <l.niyoyandi@alustudent.com>
+Date:   Mon May 22 19:02:56 2023 +0300
+
+Revert "team page added"
+    fag page created
+
+commit 5a026ad8f30d3719fea8da736e6ce9321455dee4 (origin/ft/contact-page, ft/contact-page)
+Author: Lievin <l.niyoyandi@alustudent.com>
+Date:   Mon May 22 18:58:07 2023 +0300
+
+    contact page created
+
+commit 8dac584e9ee3d23d412f58c608f4ef9cf98d7536
+Author: Lievin <l.niyoyandi@alustudent.com>
+Date:   Mon May 22 18:42:09 2023 +0300
+
+    team page added
+
+commit ff57cc71de3fd8ea3feb6d89d8d51d9bf9ad5959 (main)      
+Author: Lievin <l.niyoyandi@alustudent.com>
+Date:   Mon May 22 13:29:32 2023 +0300
+
+    learn how to solve conflict
+
+commit 6830d698909109a960963cf5f29e84d2afec75dc
+Merge: 1e7287a 00fd8fb
+Author: ALVINdimpos <49131269+ALVINdimpos@users.noreply.github.com>
+Date:   Mon May 22 12:15:53 2023 +0200
+
+
+Hp@LIEVIN-1999NIYO MINGW64 ~/Desktop/Gym-Git-Exercise-Solutions (ft/fag-page)
+$ git revert 8dac584e9ee3d23d412f58c608f4ef9cf98d7536       
+Removing team.html
+[ft/fag-page d0abe2e] Revert "team page added"
+                                               1 file changed, 12 deletions(-)
+                   delete mode 100644 team.html
+
+Hp@LIEVIN-1999NIYO MINGW64 ~/Desktop/Gym-Git-Exercise-Solutions (ft/fag-page)
+$ git push
+Enumerating objects: 3, done.
+Counting objects: 100% (3/3), done.
+Delta compression using up to 8 threads
+Compressing objects: 100% (2/2), done.
+Writing objects: 100% (2/2), 275 bytes | 275.00 KiB/s, done.
+Total 2 (delta 1), reused 0 (delta 0), pack-reused 0        
+remote: Resolving deltas: 100% (1/1), completed with 1 local object.
+To https://github.com/nili-alu/Gym-Git-Exercise-Solutions.git
+   a17532f..d0abe2e  ft/fag-page -> ft/fag-page
+
+Hp@LIEVIN-1999NIYO MINGW64 ~/Desktop/Gym-Git-Exercise-Solutions (ft/fag-page)
+$
 ```
